@@ -1,37 +1,37 @@
-AllmyLib
-========
+AllmyLib<br />
+========<br />
 
 Allmystery-API JavaScript-Library.
 jQuery > 1.9 is needed.
 This library works asynchronous. 
-Use it like:
-
-var TestingViewModel = (function() {
-    function TestingViewModel()
-    {
-        this.lib = new AllmyLib();
-    }
-    TestingViewModel.prototype.doLogin = function()
-    {
-        var username = $("#usernametextbox").val();
-        var password = $("#passwordtextbox").val();
-        this.lib.doneCallback = this.loggedIn;
-        this.lib.login(username,password);
-    }
-    TestingViewModel.prototype.loggedIn = function()
-    {
-        alert("Logged in!");
-    }
-    TestingViewModel.prototype.getThreads = function()
-    {
-        this.lib.doneCallback = this.gotThreads;
-        this.lib.getThreads("mg",0);
-    }
-    TestingViewModel.prototype.gotThreads = function(response)
-    {
-        var test = response;
-        alert(test.threads.length);
-    }
-    return TestingViewModel;
-})();
+Use it like:<br />
+<br />
+var TestingViewModel = (function() {<br />
+    function TestingViewModel()<br />
+    {<br />
+        this.lib = new AllmyLib();<br />
+    }<br />
+    TestingViewModel.prototype.doLogin = function()<br />
+    {<br />
+        var username = $("#usernametextbox").val();<br />
+        var password = $("#passwordtextbox").val();<br />
+        this.lib.doneCallback = this.loggedIn;<br />
+        this.lib.login(username,password);<br />
+    }<br />
+    TestingViewModel.prototype.loggedIn = function()<br />
+    {<br />
+        alert("Logged in!");<br />
+    }<br />
+    TestingViewModel.prototype.getThreads = function()<br />
+    {<br />
+        this.lib.doneCallback = this.gotThreads;<br />
+        this.lib.getThreads("mg",0);<br />
+    }<br />
+    TestingViewModel.prototype.gotThreads = function(response)<br />
+    {<br />
+        var test = response;<br />
+        alert(test.threads.length);<br />
+    }<br />
+    return TestingViewModel;<br />
+})();<br />
 
